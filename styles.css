@@ -1,0 +1,23 @@
+.block {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #0a1128, #1a2f7a, #0a1128);
+  background-size: 300% 300%;
+  animation: move 8s ease infinite;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #121212; /* Темно-серый цвет (лучше, чем чисто черный #000000) */
+  color: #ffffff;            /* Белый цвет текста для хорошего контраста */
+  font-family: sans-serif;
+}
+
+@keyframes move {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
