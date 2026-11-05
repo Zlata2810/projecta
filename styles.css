@@ -1,3 +1,9 @@
+body {
+  background-color: #101115; 
+  color: #ffffff;            
+}
+
+
 .block {
   max-width: 800px;
   margin: 60px auto;
@@ -10,14 +16,60 @@
   border-radius: 10px;
 }
 
-body {
-  background-color: #121212; /* Темно-серый цвет (лучше, чем чисто черный #000000) */
-  color: #ffffff;            /* Белый цвет текста для хорошего контраста */
-  font-family: sans-serif;
-}
 
 @keyframes move {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+.nav-container {
+            background-color: #0b0f19;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 8%;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-item a {
+            color: #8589ac;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        /* Эффект подсветки при наведении */
+        .nav-item a:hover, 
+        .nav-item a.active {
+            color: #596f9a; /* Неоновый голубой цвет */
+            text-shadow: 0 0 10px #8589ac;
+        }
+
+        /* Небольшая анимированная линия снизу при наведении */
+        .nav-item a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00f3ff;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 8px #00f3ff;
+        }
+
+        .nav-item a:hover::after,
+        .nav-item a.active::after {
+            width: 100%;
+        }
