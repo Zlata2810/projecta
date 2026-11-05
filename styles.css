@@ -13,7 +13,8 @@ body {
   background: linear-gradient(135deg, #0a1128, #1a2f7a, #0a1128);
   background-size: 300% 300%;
   animation: move 8s ease infinite;
-  border-radius: 10px;
+  border-radius: 10px;    
+  
 }
 
 
