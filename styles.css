@@ -1,6 +1,15 @@
 body {
   background-color: #101115; 
-  color: #ffffff;            
+  color: #ffffff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Контент займає весь вільний простір, футер притиснутий донизу */
+main {
+  flex: 1;
 }
 
 
@@ -74,3 +83,46 @@ body {
         .nav-item a.active::after {
             width: 100%;
         }
+
+/* ===== Футер ===== */
+#site-footer {
+  background-color: #0b0f19;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-inner {
+  padding: 30px 8%;
+  text-align: center;
+}
+
+.footer-title {
+  margin: 0 0 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #8589ac;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #8589ac;
+}
