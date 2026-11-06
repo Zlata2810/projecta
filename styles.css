@@ -14,15 +14,13 @@ main {
 
 
 .block {
-  max-width: 800px;
-  margin: 60px auto;
+  font-size: 22px;
   padding: 50px;
   text-align: center;
   color: white;
   background: linear-gradient(135deg, #0a1128, #1a2f7a, #0a1128);
   background-size: 300% 300%;
-  animation: move 8s ease infinite;
-  border-radius: 10px;    
+  animation: move 8s ease infinite;   
   
 }
 
@@ -74,7 +72,7 @@ main {
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #ccf5f8;
+            background-color: #edf6f6;
             transition: width 0.3s ease;
             box-shadow: 0 0 8px #00f3ff;
         }
