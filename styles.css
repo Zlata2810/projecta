@@ -53,7 +53,7 @@ body {
         /* Эффект подсветки при наведении */
         .nav-item a:hover, 
         .nav-item a.active {
-            color: #596f9a; /* Неоновый голубой цвет */
+            color: #ffffff; /* Неоновый голубой цвет */
             text-shadow: 0 0 10px #8589ac;
         }
 
@@ -65,7 +65,7 @@ body {
             height: 2px;
             bottom: 0;
             left: 0;
-            background-color: #00f3ff;
+            background-color: #ccf5f8;
             transition: width 0.3s ease;
             box-shadow: 0 0 8px #00f3ff;
         }
