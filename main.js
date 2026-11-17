@@ -1,17 +1,10 @@
-// Спільні для всіх сторінок хедер і футер.
-// Щоб змінити меню або футер — правите лише цей файл.
-
+// Спільні для всіх сторінок елементи: меню та футер.
 const PAGES = [
-  { href: "index.html", label: "Головна" },
-  { href: "advantagesAI.html", label: "Переваги" },
-  { href: "risks.html", label: "Ризики" },
-  { href: "education.html", label: "ШІ в навчанні" },
+  { href: "index.html", label: "Головна" }
 ];
 
-// Ім'я поточного файлу; порожній шлях (відкрито "/") вважаємо головною
 function currentPage() {
-  const name = location.pathname.split("/").pop();
-  return name || "index.html";
+  return location.pathname.split("/").pop() || "index.html";
 }
 
 function renderHeader() {
@@ -21,15 +14,14 @@ function renderHeader() {
   const current = currentPage();
   const items = PAGES.map((page) => {
     const isActive = page.href === current;
-    return `
-      <li class="nav-item">
-        <a href="${page.href}"${isActive ? ' class="active" aria-current="page"' : ""}>${page.label}</a>
-      </li>`;
+    return `<li class="nav-item"><a href="${page.href}"${isActive ? ' class="active" aria-current="page"' : ""}>${page.label}</a></li>`;
   }).join("");
 
   target.innerHTML = `
-    <nav class="nav-container">
-      <ul class="nav-menu">${items}
+    <nav class="nav-container" aria-label="Головна навігація">
+      <ul class="nav-menu">
+        <li class="brand-item"><a class="nav-brand" href="index.html">NEURO<span>/</span>LINK</a></li>
+        ${items}
       </ul>
     </nav>`;
 }
@@ -38,15 +30,10 @@ function renderFooter() {
   const target = document.getElementById("site-footer");
   if (!target) return;
 
-  const year = new Date().getFullYear();
-  const links = PAGES.map(
-    (page) => `<a href="${page.href}">${page.label}</a>`
-  ).join("");
-
   target.innerHTML = `
     <div class="footer-inner">
-      <p class="footer-title">Штучний інтелект: друг чи загроза?</p>
-      <p class="footer-copy">© ${year} Усі права захищено</p>
+      <p class="footer-title">NEURO<span>/</span>LINK · Штучний інтелект поруч</p>
+      <p class="footer-copy">© ${new Date().getFullYear()} Освітній проєкт про ШІ</p>
     </div>`;
 }
 
