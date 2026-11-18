@@ -1,6 +1,10 @@
 // Спільні для всіх сторінок елементи: меню та футер.
 const PAGES = [
-  { href: "index.html", label: "Головна" }
+  { href: "index.html", label: "Головна" },
+  { href: "friend or threat.html", label: "Друг чи загроза" },
+  { href: "advantagesAI.html", label: "Переваги" },
+  { href: "risks.html", label: "Ризики" },
+  { href: "education.html", label: "Навчання" }
 ];
 
 function currentPage() {

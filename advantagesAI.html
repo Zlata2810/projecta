@@ -3,14 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14120f">
     <link rel="stylesheet" href="styles.css">
-    <title>Переваги ШІ</title>
+    <title>Проста сторінка — NEURO/LINK</title>
     <script src="main.js" defer></script>
 </head>
 <body>
     <header id="site-header"></header>
 
-    <main>
+    <main class="simple-main">
+        <!-- Посилання назад -->
+        <a class="simple-back" href="index.html">← На головну</a>
+
+        <!-- Заголовок -->
+        <h1 class="simple-title">Назва теми або розділу</h1>
+        <p class="simple-lead">Короткий абзац-вступ, який пояснює суть теми простими словами без зайвих ефектів.</p>
+
+        <hr class="simple-divider">
+
+        <!-- Основний контент (перехідник / блоки тексту) -->
+        <div class="simple-content">
+            <h2>Основний блок</h2>
+            <p>Тут розміщується головний текст сторінки. Звичайний абзац, який легко читати.</p>
+            
+            <ul>
+                <li>Перший важливий момент або факт.</li>
+                <li>Другий важливий момент або факт.</li>
+                <li>Третій важливий момент або факт.</li>
+            </ul>
+        </div>
+
+        <!-- Блок переходу на інші сторінки -->
+        <div class="simple-links">
+            <a href="friend or threat.html" class="btn-link">← Попередня тема</a>
+            <a href="education.html" class="btn-link">Наступна тема →</a>
+        </div>
     </main>
 
     <footer id="site-footer"></footer>
