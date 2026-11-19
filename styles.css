@@ -401,3 +401,153 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* карточки в виде кода */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.code-card:hover {
+    transform: translateY(-4px);
+    border-color: #555555;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.card-header {
+    background-color: #2d2d2d;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    border-bottom: 1px solid #333333;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.window-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot-red {
+    background-color: #ff5f56;
+}
+
+.dot-yellow {
+    background-color: #ffbd2e;
+}
+
+.dot-green {
+    background-color: #27c93f;
+}
+
+.file-name {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #cccccc;
+    font-weight: 600;
+}
+
+.file-ext {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.ext-js {
+    color: #f1e05a;
+}
+
+.ext-css {
+    color: #569cd6;
+}
+
+.ext-md {
+    color: #4ec9b0;
+}
+
+.card-body {
+    display: flex;
+    flex: 1;
+    padding: 12px 0;
+    background-color: #1e1e1e;
+    overflow-x: auto;
+}
+
+.line-numbers {
+    padding: 0 12px;
+    text-align: right;
+    user-select: none;
+    color: #6e7681;
+    font-size: 12px;
+    line-height: 1.5;
+    border-right: 1px solid #2a2a2a;
+    margin-right: 12px;
+    min-width: 30px;
+}
+
+.code-content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d4d4d4;
+    white-space: pre;
+    padding-right: 12px;
+    margin: 0;
+}
+
+.card-footer {
+    background-color: #007acc;
+    color: #ffffff;
+    padding: 4px 12px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.card-body::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 3px;
+}
+
+.card-body::-webkit-scrollbar-thumb:hover {
+    background: #4f4f4f;
+}
