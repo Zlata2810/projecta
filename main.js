@@ -25,8 +25,24 @@ function renderHeader() {
       <ul class="nav-menu">
         <li class="brand-item"><a class="nav-brand" href="index.html">NEURO<span>/</span>LINK</a></li>
         ${items}
+        <li class="theme-toggle-item"><button class="theme-toggle" id="theme-toggle" type="button"></button></li>
       </ul>
     </nav>`;
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem("site-theme", theme);
+
+  const button = document.getElementById("theme-toggle");
+  const nextTheme = theme === "dark" ? "light" : "dark";
+  if (button) {
+    button.textContent = nextTheme === "light" ? "☀ Світла" : "☾ Темна";
+    button.setAttribute("aria-label", `Увімкнути ${nextTheme === "light" ? "світлу" : "темну"} тему`);
+  }
+
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) themeColor.content = theme === "light" ? "#f5f6fa" : "#101115";
 }
 
 function renderFooter() {
@@ -43,4 +59,11 @@ function renderFooter() {
 document.addEventListener("DOMContentLoaded", () => {
   renderHeader();
   renderFooter();
+
+  const savedTheme = localStorage.getItem("site-theme") || "dark";
+  setTheme(savedTheme);
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+  });
 });

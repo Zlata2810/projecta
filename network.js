@@ -12,7 +12,7 @@ function make(tag, attrs, parent) {
   return element;
 }
 
-const input = [{ x: 110, y: 235, text: ["Запитання", "Що може ШІ?"], link: "index.html" }];
+const input = [{ x: 110, y: 235, text: ["Промпт", "'З чого складається ШІ?'"], link: "prompt.html" }];
 const middle = [
   { x: 390, y: 115, text: ["Можливості"], link: "advantagesAI.html" },
   { x: 390, y: 355, text: ["Виклики та ризики"], link: "friend or threat.html" },

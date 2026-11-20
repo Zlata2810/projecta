@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101115">
+  <meta name="description" content="Як токени та промпти допомагають спілкуватися зі штучним інтелектом.">
+  <link rel="stylesheet" href="styles.css">
+  <title>Магія тексту: токени та промпти — NEURO/LINK</title>
+  <script src="main.js" defer></script>
+
+</head>
+<body class="prompt-theme">
+  <header id="site-header"></header>
+  <main class="prompt-page">
+    <section class="prompt-hero" aria-labelledby="page-title">
+      <p class="eyebrow"><span class="status-dot"></span> ЯК ШІ ЧИТАЄ ТЕКСТ</p>
+      <h1 id="page-title">Магія тексту:<br><span>токени та промпти</span></h1>
+      <p class="prompt-lead">Модель не сприймає текст зовсім так, як людина. Розберімося, на які частинки вона його ділить і як сформулювати запит, щоб отримати кориснішу відповідь.</p>
+    </section>
+
+    <section class="prompt-grid" aria-label="Токени та промпти">
+      <article class="prompt-card">
+        <p class="prompt-kicker">01 / Токени</p>
+        <h2>Текст — це шматочки</h2>
+        <p>Перед обробкою модель перетворює текст на токени. Токеном може бути ціле коротке слово, частина довшого слова, пробіл або знак пунктуації.</p>
+        <div class="token-example" aria-label="Приклад слова, поділеного на токени">
+          <div class="token-word">
+            <span class="token">нейро</span><span class="token">мереж</span><span class="token">а</span><span class="token">!</span>
+          </div>
+          <p class="token-caption"><strong>Один із можливих поділів:</strong> конкретні частинки залежать від мови й токенізатора моделі.</p>
+        </div>
+      </article>
+
+      <article class="prompt-card">
+        <p class="prompt-kicker">02 / Промпти</p>
+        <h2>Запит задає напрям</h2>
+        <p>Чітка роль, контекст і формат відповіді допомагають моделі краще зрозуміти завдання.</p>
+        <div class="chat" aria-label="Порівняння двох запитів до ШІ">
+          <div class="chat-case bad-case">
+            <p class="chat-label"><span class="status-dot"></span> Поганий запит</p>
+            <p class="chat-bubble">Розкажи про космос.</p>
+            <p class="chat-reply"><strong>Чого бракує?</strong> Тема широка, а аудиторія й бажана довжина невідомі.</p>
+          </div>
+          <div class="chat-case good-case">
+            <p class="chat-label"><span class="status-dot"></span> Правильний запит · роль + контекст</p>
+            <p class="chat-bubble">Ти — учитель природознавства для учнів 5 класу. Поясни, чому Місяць змінює вигляд, у 3 коротких реченнях і наведи просту аналогію.</p>
+            <p class="chat-reply"><strong>Що допомогло?</strong> Роль визначає тон, контекст — рівень пояснення, а формат — обсяг відповіді.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <p class="prompt-takeaway"><strong>Підказка:</strong> назви роль, дай потрібний контекст, чітко сформулюй завдання й попроси зручний формат. Відповідь усе одно варто перевіряти: ШІ може помилятися.</p>
+    <p class="prompt-project-footer">Навчальний проєкт про можливості та обмеження штучного інтелекту.</p>
+  </main>
+  <footer id="site-footer"></footer>
+</body>
+</html>
