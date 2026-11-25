@@ -3,7 +3,8 @@ const PAGES = [
   { href: "index.html", label: "Головна" },
   { href: "friend or threat.html", label: "Друг чи загроза" },
   { href: "advantagesAI.html", label: "Переваги" },
-  { href: "education.html", label: "Навчання" }
+  { href: "education.html", label: "Навчання" },
+  { href: "prompts.html", label: "Структура промптів" }
 ];
 
 function currentPage() {
