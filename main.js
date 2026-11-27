@@ -4,11 +4,11 @@ const PAGES = [
   { href: "friend or threat.html", label: "Друг чи загроза" },
   { href: "advantagesAI.html", label: "Переваги" },
   { href: "education.html", label: "Навчання" },
-  { href: "prompts.html", label: "Структура промптів" }
+  { href: "prompt.html", label: "Структура промптів" }
 ];
 
 function currentPage() {
-  return location.pathname.split("/").pop() || "index.html";
+  return decodeURIComponent(location.pathname.split("/").pop() || "index.html");
 }
 
 function renderHeader() {
